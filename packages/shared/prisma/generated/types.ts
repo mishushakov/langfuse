@@ -162,6 +162,7 @@ export type EvalTemplate = {
     version: number;
     prompt: string;
     model: string;
+    provider: string;
     model_params: unknown;
     vars: Generated<string[]>;
     output_schema: unknown;
@@ -209,8 +210,12 @@ export type LlmApiKeys = {
     created_at: Generated<Timestamp>;
     updated_at: Generated<Timestamp>;
     provider: string;
+    adapter: string;
     display_secret_key: string;
     secret_key: string;
+    base_url: string | null;
+    custom_models: string[];
+    with_default_models: Generated<boolean>;
     project_id: string;
 };
 export type MembershipInvitation = {
